@@ -24,7 +24,13 @@ You can launch the experiment just running the script.
 # LRCN Variation - 2D CNN + 1D CNN version
 The repository includes a variation of LRCN where LSTM in the LRCN model is replaced with the one-dimensional CNN layer.
 
-The idea is introduced in the paper:
+The introduced one-dimensional CNN layer plays a role of capturing temporal dynamics in video as LSTM does.
+
+The benefit comes from the fact that the CNN layer has a better GPU utilization than LSTM since LSTM has a sequential execution path.  
+
+(It becomes easier to understand if one recalls one of original motivations in developing the Transformer model was to achieve parallelization by avoiding RNN)
+
+The idea is explained in the paper:
 
 ```BibTeX
 @article{
